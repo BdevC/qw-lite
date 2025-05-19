@@ -1,16 +1,11 @@
-import type { FunctionDeclaration } from '@babel/types';
-import { useEffect } from 'react';
-
-const sleep = (ms: number | undefined) => new Promise(resolve => setTimeout(resolve, ms));
 
 function App() {
-  useEffect(() => {
-    function handleLoad(e) {
-      console.log("page fully loaded");
-    }
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
+  return (
+    <div className="App">
+      <h1>Welcome to React</h1>
+      <p>To get started, edit <code>src/App.tsx</code> and save to reload.</p>
+    </div>
+  )
 }
 
 export default App
